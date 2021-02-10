@@ -1,13 +1,18 @@
-<form action="{{ action }}" method="get">
-    <input type="hidden" name="shop_id" value="{{ sid }}"/>
-    <input type="hidden" name="amount" value="{{ amount }}"/>
-    <input type="hidden" name="order_id" value="{{ cart_order_id }}"/>
-    <input type="hidden" name="currency" value="{{ currency_code }}"/>
-    <input type="hidden" name="sign" value="{{ MNT_SIGNATURE }}"/>
-    <input type="hidden" name="test" value="{{ roskassa_test }}"/>
-    <div class="buttons">
-        <div class="{% if ap_use %} text-center {% else %} pull-right {% endif %}">
-            <input type="submit" value="{{ btn_confirm }}" class="btn btn-primary"/>
-        </div>
-    </div>
+<form action="{{ payment_url }}" method="get">
+	<input type="hidden" name="shop_id" value="{{ roskassa_login }}" />
+	{% for key, value in products %}
+        <input type="hidden" name="{{ key }}" value="{{ value }}"/>
+    {% endfor %}
+	<input type="hidden" name="amount" value="{{ out_summ }}" />
+	<input type="hidden" name="order_id" value="{{ inv_id }}" />
+	<input type="hidden" name="currency" value="{{ out_summ_currency }}" />
+	<input type="hidden" name="sign" value="{{ sign }}" />
+	{% if roskassa_test %}
+		<input type="hidden" name="test" value="1" />
+	{% endif %}
+	<div class="buttons">
+		<div class="pull-right">
+			<input type="submit" value="{{ button_confirm }}" class="btn btn-primary" />
+		</div>
+	</div>
 </form>

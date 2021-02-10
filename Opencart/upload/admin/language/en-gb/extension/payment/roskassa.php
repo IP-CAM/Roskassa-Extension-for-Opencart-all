@@ -1,38 +1,39 @@
 <?php
 // Heading
-$_['heading_title']		            = 'Roskassa';
+$_['heading_title']   	 	= 'Роcкасса';
 
-// Text
-$_['text_extension']	            = 'Extensions';
-$_['text_success']		            = 'Success: You have modified Roskassa account details!';
-$_['text_edit']                     = 'Edit Roskassa';
-$_['text_roskassa']	            = '<a href="https://roskassa.net/" target="_blank"><img src="view/image/payment/roskassa.svg" alt="Roskassa" title="Roskassa" style="border: 1px solid #EEEEEE;" /></a>';
-$_['text_info_ssl']                 = 'For payment with Apple Pay to work, your site must be using HTTPS (valid TLS / SSL certificate)';
-$_['text_info_support']             = 'Please contact Roskassa commercial department for additional settings for Apple Pay';
+// Text 
+$_['text_payment']      	= 'Оплата';
+$_['text_success']       	= 'Настройки модуля оплаты Роcкасса обновлены!';
+$_['text_robokassa'] 		= '<a target="_blank" href="https://roskassa.net/"><img src="/admin/view/image/payment/roskassa.png" alt="roskassa" style="max-width:140px" /></a>';
+$_['text_edit']      	    = 'Редактирование Робокасса';
+$_['text_enabled']          = 'Включено';
+$_['text_disabled']         = 'Отключено';
+$_['text_yes']           	= 'Да';
+$_['text_no']            	= 'Нет';
 
 // Entry
-$_['entry_account']		            = 'Account ID';
-$_['entry_secret']		            = 'Account Code';
-$_['entry_test']		            = 'Test Mode';
-$_['entry_bank_cards']	            = 'Bank cards - priority payment method';
-$_['entry_total']		            = 'Total';
-$_['entry_order_status']            = 'Order Status';
-$_['entry_geo_zone']	            = 'Geo Zone';
-$_['entry_status']		            = 'Status';
-$_['entry_sort_order']	            = 'Sort Order';
-$_['entry_ap_use']                  = 'Apple Pay';
-$_['entry_ap_public_id']            = 'Public ID';
-$_['entry_ap_payee']                = 'Payment receiver';
+$_['entry_merch_login']     = 'Идентификатор магазина';
+$_['entry_password']    	= 'Секретный ключ';
+$_['entry_test']         	= 'Тестовый режим';
+$_['entry_tax_type']        = 'Система налогообложения';
+$_['entry_tax']         	= 'Налоговая ставка';
+$_['entry_payment_method']  = 'Признак способа расчёта';
+$_['entry_payment_object']  = 'Признак предмета расчёта';
+$_['entry_result_url']     	= 'Result URL';
+$_['entry_success_url']     = 'Success URL';
+$_['entry_fail_url']      	= 'Fail URL';
+$_['entry_order_status'] 	= 'Статус заказа после оплаты';
+$_['entry_geo_zone']     	= 'Географическая зона';
+$_['entry_status']       	= 'Статус';
+$_['entry_sort_order']   	= 'Порядок сортировки';
 
 // Help
-$_['help_secret']		            = 'The secret word to confirm transactions with (must be the same as defined on the merchant account configuration page).';
-$_['help_total']		            = 'The checkout total the order must reach before this payment method becomes active.';
-$_['help_bank_cards']               = 'The buyer will be asked to enter the bank card details. Immediately on your website page';
-$_['help_ap_use']                   = 'Connecting Apple Pay is a contactless payment method. Only works for Apple devices';
-$_['help_ap_public_id']             = 'Public identifier (Public Id) of your account from Roskassa';
-$_['help_ap_payee']                 = 'Russian letters cannot be used. For example - the name of your online store. Will be displayed to the buyer during the payment process';
+
+$_['help_test']         	= 'Режим для отладки модуля. Информацию можно посмотреть в файле storage/logs/ros.log';
 
 // Error
-$_['error_permission']	 = 'Warning: You do not have permission to modify payment Roskassa!';
-$_['error_account']		 = 'Account No. Required!';
-$_['error_secret']		 = 'Account Code Required!';
+$_['error_permission']   	= 'Внимание: У Вас недостаточно прав для управления модулем оплаты Роскасса!';
+$_['error_merch_login']     = 'Требуется указать идентификатор магазина!';
+$_['error_password']    	= 'Требуется ввести секретный ключ!';
+?>
